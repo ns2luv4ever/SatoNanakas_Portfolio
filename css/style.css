@@ -1,18 +1,199 @@
 @charset "utf-8";
 /* CSS Document */
-
+img{
+  max-width: 100%;
+  height: auto;
+}
 /* 全ページ共通 */
 h1{
 
 }
 h2{
+  color: #222221;
   font-family: "Fredoka", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-size: 4rem;
+  font-weight: 510;
+  font-style: normal;  
 }
 h3{
-    
+  color: #222221;
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 3.5rem;
+  font-weight: 510;
+  font-style: normal;  
+}
+h4{
+  color: #222221;
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 3rem;
+  font-weight: 510;
+  font-style: normal;
+}
+h5{
+  color: #222221;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-style: normal;
+}
+p{
+  color: #222221;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ja{
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-style: normal;
+}
+.flex-pc{
+  display: flex;
+}
+.shousai-btn{
+  background-color: #FFD7DD;
+  border-radius: 30px;
+  padding: 15px 30px;
+  border: 5px solid #222221;
+  box-shadow: 10px 10px 0px -5px #777777;
+}
+.shousai-btn2{
+  background-color: #f4f4f4;
+  border-radius: 50px;
+  /* padding: 15px 30px; */
+  border: 5px solid #222221;
+  box-shadow: 15px 15px 0px -5px #777777;
+}
+.s14w400{
+  color: #222221;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* ーーーーー */
+/* TOPページ */
+/* ーーーーー */
+body{
+  margin: 0 auto;
+}
+.top .profile-bgc{
+  background-color: #707ab8;
+  width: 100%;
+}
+.top .inner{
+  max-width: 1200px;
+  padding: 0 1.5%;
+  margin: 0 auto;
+  /* border: 1px solid #000; */
+}
+.top .about{
+  margin: 0 auto;
+  background-color: #f4f4f4;
+  border-radius: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 10px solid #222221;
+  padding: 3%;
+}
+.top .about .container{
+  gap: 5%;
+  margin: 5% auto 3% auto;
+  align-items: center;
+  justify-content: center;
+}
+.top .about .container img{
+  width: 24%;
+}
+.top .about .txt{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.top .about .txt p{
+  margin: 3% 0 5% 0;
+}
+.top .about .txt a{
+  margin-left: auto;
+}
+
+
+.top .skill{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3%;
+  margin: 4% 0 0 0;
+  /* border: 1px solid #000; */
+}
+.top .skill .container{
+  gap:  5%;
+  margin: 3% auto 3% auto;
+  width: 100%;
+  /* border: 1px solid #000; */
+  align-items: flex-start;
+  justify-content: center;
+}
+.top .skill .container .skill-box{
+  width: 37%;
+  background-color: #f4f4f4;
+  border: 10px solid #222221;
+  border-radius: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3%;
+}
+.top .skill .container .skill-box .txt{
+  padding: 5% 0;
+  /* border: 1px solid #000; */
+  
+}
+.top .skill .container .skill-box .txt .m-b4{
+  margin-bottom: 4%;
+}
+
+
+.top .works{
+  background-color: #f4f4f4;
+  border: 1px solid #000;
+  padding: 6% 0 0 0;
+}
+.top .works .container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3% auto 3% auto;
+  /* border: 1px solid #000; */
+}
+.top .works .container .list{
+  gap: 5%;
+  margin-top: 5%;
+  /* border: 1px solid #000; */
+}
+.top .works .container .piece{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border: 9px solid #222221;
+  border-radius: 50px;
+  padding: 6% 4%;
+}
+.top .works .container .piece img{
+  width: 95%;
+}
+.top .works .container .piece p{
+  color: #f4f4f4;
+  background-color: #707ab8;
+  border-radius: 15px;
+  padding: 5px 15px;
+  margin: 1.5%;
 }
