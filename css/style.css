@@ -4,7 +4,13 @@ img{
   max-width: 100%;
   height: auto;
 }
+a{
+  text-decoration: none;
+  color: #222221;
+}
 /* 全ページ共通 */
+/* ハンバーガー */
+
 h1{
 
 }
@@ -45,7 +51,14 @@ p{
   font-weight: 400;
   font-style: normal;
 }
-
+.w600{
+  color: #222221;
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-style: normal;
+}
 .ja{
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-size: 1.3rem;
@@ -56,18 +69,29 @@ p{
   display: flex;
 }
 .shousai-btn{
-  background-color: #FFD7DD;
+  background-color: #eca8c6;
   border-radius: 30px;
   padding: 15px 30px;
   border: 5px solid #222221;
-  box-shadow: 10px 10px 0px -5px #777777;
+  box-shadow: 0px 10px 0px -2px #777777;
+}
+.shousai-btn:hover {
+  box-shadow: none;
+  transform: translateY(5px);
+  background-color: #dc72a0;
+  transition: all 0.3s;
 }
 .shousai-btn2{
   background-color: #f4f4f4;
   border-radius: 50px;
   /* padding: 15px 30px; */
   border: 5px solid #222221;
-  box-shadow: 15px 15px 0px -5px #777777;
+  box-shadow: 0px 15px 0px -2px  #777777;
+}
+.shousai-btn2:hover {
+  box-shadow: none;
+  transform: translateY(15px);
+  transition: all 0.3s;
 }
 .s14w400{
   color: #222221;
@@ -76,7 +100,9 @@ p{
   font-weight: 400;
   font-style: normal;
 }
-
+.flex{
+  display: flex;
+}
 
 /* ーーーーー */
 /* TOPページ */
@@ -123,6 +149,8 @@ body{
 }
 .top .about .txt a{
   margin-left: auto;
+  display: inline-block;
+  cursor: pointer;
 }
 
 
@@ -130,7 +158,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3%;
+  padding: 3% 0 6% 0;
   margin: 4% 0 0 0;
   /* border: 1px solid #000; */
 }
@@ -164,8 +192,8 @@ body{
 
 .top .works{
   background-color: #f4f4f4;
-  border: 1px solid #000;
-  padding: 6% 0 0 0;
+  /* border: 1px solid #000; */
+  padding: 3% 0 5% 0;
 }
 .top .works .container{
   display: flex;
@@ -175,8 +203,8 @@ body{
   /* border: 1px solid #000; */
 }
 .top .works .container .list{
-  gap: 5%;
-  margin-top: 5%;
+  gap: 6%;
+  margin-top: 6%;
   /* border: 1px solid #000; */
 }
 .top .works .container .piece{
@@ -186,6 +214,14 @@ body{
   border: 9px solid #222221;
   border-radius: 50px;
   padding: 6% 4%;
+  opacity: 0;         /* 初期値は透明にしておく */
+  transition: 0.5s;    /* 動くスピードを0.5秒に指定 */
+  position: relative; /* 相対位置の設定 */
+  top: 50px;          /* 事前に下に50pxずらしておく */
+}
+.top .works .container .piece.active {
+  opacity: 1;         /* 透明度を元に戻す */
+  top: 0;             /* ずらしていた位置を戻すことで上に上がっているようにみえる */
 }
 .top .works .container .piece img{
   width: 95%;
@@ -197,3 +233,22 @@ body{
   padding: 5px 15px;
   margin: 1.5%;
 }
+
+.footer{
+  background-color: #dc72a0;
+  padding: 5% 0 2%;
+}
+.copyright{
+  color: #222221;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-style: normal;
+  margin: 6% 0 0 0;
+  text-align: center;
+}
+.top .footer .flex{
+  justify-content: center;
+  gap: 6%;
+}
+

@@ -14,14 +14,22 @@
 
 <!--ready関数-->
 <script>
-$(function(){
-
+$(window).on('scroll load', function(){        /* ページロード時、またはスクロールされた時*/
+  var scroll = $(this).scrollTop();            /* 現在のスクロール量を測定 */
+  var windowHeight = $(window).height();       /* ウィンドウの高さを測定 */
+  $('.fadeIn').each(function(){                /* 「fadeIn」のクラスがついているものを1つずつ確認し・・・ */
+    var cntPos = $(this).offset().top;         /* 対象の要素の上からの距離を測定 */
+    if(scroll > cntPos - windowHeight + windowHeight / 3){  /* 要素がある位置までスクロールされていたら */
+      $(this).addClass('active');              /* 「active」のクラスを付与 */
+    }
+  });
 });
 </script>
 
 </head>
 
 <body>
+
 <main class="top">
     <section class="profile-bgc">
         <div class="inner">
@@ -71,27 +79,72 @@ $(function(){
             </div>
         </div>
     </section>
-    <section class="works">
+    <section class="works" id="works">
         <div class="inner">
             <div class="container">
                 <h2>Works</h2>
                 <p class="ja">制作したもの</p>
                 <div class="flex-pc list">
                     <a href="#">
-                        <div class="piece shousai-btn2">
+                        <div class="piece shousai-btn2 fadeIn">
                             <img src="img/ring_mockup.png" alt="架空の指輪のブランドサイト" width="510" height="325">
                             <p>個人製作</p>
                             <h5>【仮想サイト】ファッションリングサイト</h5>
                         </div>
                     </a>
                     <a href="#">
-                        <div class="piece shousai-btn2">
+                        <div class="piece shousai-btn2 fadeIn">
                             <img src="img/kosin_mockup.png" alt="架空の建設会社のコーポレートサイト" width="510" height="325">
                             <p>個人製作</p>
                             <h5>【仮想サイト】建設会社のコーポレートサイト</h5>
                         </div>
                     </a>
                 </div>
+                <div class="flex-pc list">
+                    <a href="#">
+                        <div class="piece shousai-btn2 fadeIn">
+                            <img src="img/serenatura_mockup.png" alt="架空の化粧品のブランドサイト" width="510" height="325">
+                            <p>個人製作</p>
+                            <h5>【仮想サイト】化粧品ブランドサイト</h5>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="piece shousai-btn2 fadeIn">
+                            <img src="img/kawamiyabi_mockup.png" alt="架空の革靴屋のブランドサイト" width="510" height="325">
+                            <p>個人製作</p>
+                            <h5>【仮想サイト】革靴屋のブランドサイト</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-pc list">
+                    <a href="#">
+                        <div class="piece shousai-btn2 fadeIn">
+                            <img src="img/taiyouyouchien_mockup.png" alt="架空の幼稚園のサイト" width="510" height="325">
+                            <p>個人製作</p>
+                            <h5>【仮想サイト】幼稚園のサイト</h5>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="piece shousai-btn2 fadeIn">
+                            <img src="img/kawamiyabi_mockup.png" alt="架空の革靴屋のブランドサイト" width="510" height="325">
+                            <p>個人製作</p>
+                            <h5>【仮想サイト】革靴屋のブランドサイト</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="inner">
+            <div class="flex">
+                <a href="index.html"><p class="w600">Home</p></a>
+                <a href="#"><p class="w600">About</p></a>
+                <a href="#works"><p class="w600">Works</p></a>
+            </div>
+            <p class="copyright">© 2025 Sato Nanaka's Portfolio</p>
+        </div>
+    </section>
                         
 </main>
 </body>
