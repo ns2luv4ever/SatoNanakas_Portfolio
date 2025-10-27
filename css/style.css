@@ -10,7 +10,116 @@ a{
 }
 /* 全ページ共通 */
 /* ハンバーガー */
+#menu {
+  z-index: 2;
+}
 
+#menu-bar {
+  width: 45px;
+  height: 40px;
+  top: 30px;
+  right: auto;
+  left: 20px;
+  cursor: pointer;
+  position: fixed;
+}
+
+.bar {
+  height: 8px;
+  width: 100%;
+  background-color: #eca8c6;
+  display: block;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+#bar1 {
+  transform: translateY(-4px);
+}
+
+#bar3 {
+  transform: translateY(4px);
+}
+
+.nav {
+  transition: 0.3s ease;
+  display: none;
+}
+
+.nav ul {
+  padding: 0 22px;
+}
+
+.nav li {
+  list-style: none;
+  padding: 12px 0;
+}
+
+.nav li a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.nav li a:hover {
+  font-weight: bold;
+}
+
+.menu-bg, #menu {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.menu-bg {
+  z-index: 1;
+  width: 0;
+  height: 0;
+  margin: 30px 0 20px 20px;
+  background: radial-gradient(circle, #eca8c6, #eca8c6);
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.change {
+  display: block;
+}
+
+.change .bar {
+  background-color: white;
+}
+
+.change #bar1 {
+  transform: translateY(4px) rotateZ(-45deg);
+}
+
+.change #bar2 {
+  opacity: 0;
+}
+
+.change #bar3 {
+  transform: translateY(-6px) rotateZ(45deg);
+}
+
+.change-bg {
+  width: 520px;
+  height: 460px;
+  transform: translate(-60%,-30%);
+}
+
+/* フェードイン */
+.fadeIn{
+  opacity: 0;         /* 初期値は透明にしておく */
+  transition: 0.5s;    /* 動くスピードを0.5秒に指定 */
+  position: relative; /* 相対位置の設定 */
+  top: 50px;
+}
+.fadeIn.active{
+  opacity: 1;         /* 透明度を元に戻す */
+  top: 0;
+}
+
+/* 見出し */
 h1{
 
 }
@@ -38,6 +147,14 @@ h4{
   font-weight: 510;
   font-style: normal;
 }
+.jpn-h4{
+  color: #222221;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 1.9rem;
+  font-style: normal;
+}
 h5{
   color: #222221;
   font-family: "Zen Kaku Gothic New", sans-serif;
@@ -45,6 +162,7 @@ h5{
   font-weight: 500;
   font-style: normal;
 }
+/* 本文 */
 p{
   color: #222221;
   font-family: "Zen Kaku Gothic New", sans-serif;
@@ -59,15 +177,18 @@ p{
   font-weight: 600;
   font-style: normal;
 }
+/* 見出し下日本語 */
 .ja{
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-size: 1.3rem;
   font-weight: 400;
   font-style: normal;
 }
+/* PCでは横並び（スマホは縦並び） */
 .flex-pc{
   display: flex;
 }
+/* 影のあるボタン */
 .shousai-btn{
   background-color: #eca8c6;
   border-radius: 30px;
@@ -81,6 +202,7 @@ p{
   background-color: #dc72a0;
   transition: all 0.3s;
 }
+/* 制作物一覧のボタン */
 .shousai-btn2{
   background-color: #f4f4f4;
   border-radius: 50px;
@@ -100,27 +222,56 @@ p{
   font-weight: 400;
   font-style: normal;
 }
+/* パソコンでもスマホでも横並び */
 .flex{
   display: flex;
 }
+/* フッター */
+.footer{
+  background-color: #dc72a0;
+  padding: 5% 0 2%;
+}
+.copyright{
+  color: #222221;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-style: normal;
+  margin: 6% 0 0 0;
+  text-align: center;
+}
+.footer .flex{
+  justify-content: center;
+  gap: 6%;
+}
+/* body中央 */
+body{
+  margin: 0 auto;
+}
+/* 作品　個人製作　座布団 */
+.kadomaru-band{
+  color: #f4f4f4;
+  background-color: #707ab8;
+  border-radius: 15px;
+  padding: 5px 15px;
+  margin: 1.5%;
+}
+
 
 /* ーーーーー */
 /* TOPページ */
 /* ーーーーー */
-body{
-  margin: 0 auto;
-}
-.top .profile-bgc{
+.profile-bgc{
   background-color: #707ab8;
   width: 100%;
 }
-.top .inner{
+.inner{
   max-width: 1200px;
   padding: 0 1.5%;
   margin: 0 auto;
   /* border: 1px solid #000; */
 }
-.top .about{
+.about{
   margin: 0 auto;
   background-color: #f4f4f4;
   border-radius: 120px;
@@ -130,24 +281,24 @@ body{
   border: 10px solid #222221;
   padding: 3%;
 }
-.top .about .container{
+.about .container{
   gap: 5%;
-  margin: 5% auto 3% auto;
+  margin: 3% auto 3% auto;
   align-items: center;
   justify-content: center;
 }
-.top .about .container img{
+.about .container img{
   width: 24%;
 }
-.top .about .txt{
+.about .txt{
   width: 50%;
   display: flex;
   flex-direction: column;
 }
-.top .about .txt p{
+.about .txt p{
   margin: 3% 0 5% 0;
 }
-.top .about .txt a{
+.about .txt a{
   margin-left: auto;
   display: inline-block;
   cursor: pointer;
@@ -214,14 +365,6 @@ body{
   border: 9px solid #222221;
   border-radius: 50px;
   padding: 6% 4%;
-  opacity: 0;         /* 初期値は透明にしておく */
-  transition: 0.5s;    /* 動くスピードを0.5秒に指定 */
-  position: relative; /* 相対位置の設定 */
-  top: 50px;          /* 事前に下に50pxずらしておく */
-}
-.top .works .container .piece.active {
-  opacity: 1;         /* 透明度を元に戻す */
-  top: 0;             /* ずらしていた位置を戻すことで上に上がっているようにみえる */
 }
 .top .works .container .piece img{
   width: 95%;
@@ -234,21 +377,88 @@ body{
   margin: 1.5%;
 }
 
-.footer{
-  background-color: #dc72a0;
-  padding: 5% 0 2%;
+
+/* ーーーーーー */
+/* Aboutページ */
+/* ーーーーーー */
+.About .skill{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8% 0 3% 0;
 }
-.copyright{
-  color: #222221;
-  font-family: "Zen Kaku Gothic New", sans-serif;
-  font-size: 0.875rem;
-  font-weight: 600;
-  font-style: normal;
-  margin: 6% 0 0 0;
-  text-align: center;
-}
-.top .footer .flex{
+.About .skill .app-skill .app{
+  border: 6px solid #222221;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 6%;
+  border-radius: 20px;
+}
+.About .skill .app-skill{
+  width: 50%;
+}
+.About .skill .flex-pc{
+  gap: 5%;
+  margin: 5% 0 0 0;
+}
+.About .skill .app-skill .flex{
+  align-items: center;
+  gap: 5px;
+  margin: 0 0 8px 0;
+}
+.About .circle0{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #d1d1d1;/* 背景色 */
+  border: 6px solid #777777;
+}
+.About .circle1{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #eca8c6;/* 背景色 */
+  border: 6px solid #222221;
+}
+.About .figmalogo{
+  width: 60px;
 }
 
+
+.About .strength{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3% 0 6% 0;
+  margin: 4% 0 0 0;
+}
+.About .strength .container{
+  gap:  2%;
+  margin: 3% auto 3% auto;
+  width: 100%;
+  /* border: 1px solid #000; */
+  align-items: flex-start;
+  justify-content: center;
+}
+.About .strength .strength-box{
+  width: 35%;
+  background-color: #f4f4f4;
+  border: 10px solid #222221;
+  border-radius: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3%;
+}
+.About .strength .strength-box p{
+  padding: 5% 0;
+}
+
+/* ーーーーーー */
+/* work_1ページ */
+/* ーーーーーー */
+.work_1 .f4{
+  background-color: #f4f4f4;
+}

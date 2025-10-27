@@ -9,10 +9,16 @@
  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
 <!--jQuery本体-->
 <script src="js/jquery-1.11.2.min.js"></script>
 
+
 <!--ready関数-->
+<!-- フェードイン -->
 <script>
 $(window).on('scroll load', function(){        /* ページロード時、またはスクロールされた時*/
   var scroll = $(this).scrollTop();            /* 現在のスクロール量を測定 */
@@ -24,11 +30,37 @@ $(window).on('scroll load', function(){        /* ページロード時、また
     }
   });
 });
+// ハンバーガー
+jQuery(function(){
+function menuOnClick() {
+  document.getElementById("menu-bar").classList.toggle("change");
+  document.getElementById("nav").classList.toggle("change");
+  document.getElementById("menu-bg").classList.toggle("change-bg");
+}
+});
 </script>
 
 </head>
 
 <body>
+<!-- ハンバーガーメニュー -->    
+<div id="menu">
+  <div id="menu-bar" onclick="menuOnClick()">
+    <div id="bar1" class="bar"></div>
+    <div id="bar2" class="bar"></div>
+    <div id="bar3" class="bar"></div>
+  </div>
+  <nav class="nav" id="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about/index.html">About</a></li>
+      <li><a href="#wo">Works</a></li>
+    </ul>
+  </nav> 
+</div>
+
+<div class="menu-bg" id="menu-bg"></div>
+
 
 <main class="top">
     <section class="profile-bgc">
@@ -36,16 +68,16 @@ $(window).on('scroll load', function(){        /* ページロード時、また
             <div class="about">
                 <h2>About</h2>
                 <p class="ja">私について</p>
-                <div class="flex-pc container">
+                <div class="flex-pc container fadeIn">
                     <img src="img/face_illust.png" alt="佐藤菜々果の似顔絵" width="680" height="916">
                     <div class="txt">
                         <h3>Sato Nanaka</h3>
                         <p>
                             2003年埼玉県生まれ。<br>
-                            高校卒業後は、主に飲食店のアルバイトとして接客業務に従事していましが、幼いころから好きだったデザインに関する職に携わりたいと思い始めたころ、Webデザイナーという職業に出会いました。<br>
+                            高校卒業後は主に飲食店のアルバイトとして接客業務に従事していましが、幼いころから好きだったデザインに関する職に携わりたいと思い始めたころWebデザイナーという職業に出会いました。<br>
                             Webデザイナーになるため2025年6月から職業訓練校へ通い、Webデザインやコーディングについて学んでいます。
                         </p> <!-- 軽い自己紹介 -->
-                        <a href="#" class="shousai-btn">詳しく見る&ensp;→</a>
+                        <a href="about/index.html" class="shousai-btn">詳しく見る&ensp;→</a>
                     </div>
                 </div>
             </div>
@@ -55,7 +87,7 @@ $(window).on('scroll load', function(){        /* ページロード時、また
                 <h2>Skill</h2>
                 <p class="ja">できること</p>
                 <div class="flex-pc container">
-                    <div class="skill-box">
+                    <div class="skill-box fadeIn">
                         <h4>Design</h4>
                         <div class="txt">
                             <p class="s14w400 m-b4">Illustrator/Photoshop/Figma</p> <!-- 使えるツール -->
@@ -65,7 +97,7 @@ $(window).on('scroll load', function(){        /* ページロード時、また
                             </p>
                         </div>
                     </div>
-                    <div class="skill-box">
+                    <div class="skill-box fadeIn">
                         <h4>Coding</h4>
                         <div class="txt">
                             <p class="s14w400 m-b4">VScode/HTML/CSS/jQuery</p> <!-- 使えるツール -->
@@ -85,49 +117,49 @@ $(window).on('scroll load', function(){        /* ページロード時、また
                 <h2>Works</h2>
                 <p class="ja">制作したもの</p>
                 <div class="flex-pc list">
-                    <a href="#">
+                    <a href="works_1/index.html">
                         <div class="piece shousai-btn2 fadeIn">
                             <img src="img/ring_mockup.png" alt="架空の指輪のブランドサイト" width="510" height="325">
-                            <p>個人製作</p>
+                            <p class="kadomaru-band">個人製作</p>
                             <h5>【仮想サイト】ファッションリングサイト</h5>
                         </div>
                     </a>
-                    <a href="#">
+                    <a href="works_2/index.html">
                         <div class="piece shousai-btn2 fadeIn">
                             <img src="img/kosin_mockup.png" alt="架空の建設会社のコーポレートサイト" width="510" height="325">
-                            <p>個人製作</p>
+                            <p class="kadomaru-band">個人製作</p>
                             <h5>【仮想サイト】建設会社のコーポレートサイト</h5>
                         </div>
                     </a>
                 </div>
                 <div class="flex-pc list">
-                    <a href="#">
+                    <a href="works_3/index.html">
                         <div class="piece shousai-btn2 fadeIn">
                             <img src="img/serenatura_mockup.png" alt="架空の化粧品のブランドサイト" width="510" height="325">
-                            <p>個人製作</p>
+                            <p class="kadomaru-band">個人製作</p>
                             <h5>【仮想サイト】化粧品ブランドサイト</h5>
                         </div>
                     </a>
-                    <a href="#">
+                    <a href="works_4/index.html">
                         <div class="piece shousai-btn2 fadeIn">
                             <img src="img/kawamiyabi_mockup.png" alt="架空の革靴屋のブランドサイト" width="510" height="325">
-                            <p>個人製作</p>
+                            <p class="kadomaru-band">個人製作</p>
                             <h5>【仮想サイト】革靴屋のブランドサイト</h5>
                         </div>
                     </a>
                 </div>
                 <div class="flex-pc list">
-                    <a href="#">
+                    <a href="works_5/index.html">
                         <div class="piece shousai-btn2 fadeIn">
                             <img src="img/taiyouyouchien_mockup.png" alt="架空の幼稚園のサイト" width="510" height="325">
-                            <p>個人製作</p>
+                            <p class="kadomaru-band">個人製作</p>
                             <h5>【仮想サイト】幼稚園のサイト</h5>
                         </div>
                     </a>
                     <a href="#">
                         <div class="piece shousai-btn2 fadeIn">
                             <img src="img/kawamiyabi_mockup.png" alt="架空の革靴屋のブランドサイト" width="510" height="325">
-                            <p>個人製作</p>
+                            <p class="kadomaru-band">個人製作</p>
                             <h5>【仮想サイト】革靴屋のブランドサイト</h5>
                         </div>
                     </a>
@@ -139,7 +171,7 @@ $(window).on('scroll load', function(){        /* ページロード時、また
         <div class="inner">
             <div class="flex">
                 <a href="index.html"><p class="w600">Home</p></a>
-                <a href="#"><p class="w600">About</p></a>
+                <a href="about/index.html"><p class="w600">About</p></a>
                 <a href="#works"><p class="w600">Works</p></a>
             </div>
             <p class="copyright">© 2025 Sato Nanaka's Portfolio</p>

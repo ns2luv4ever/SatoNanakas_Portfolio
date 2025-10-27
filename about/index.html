@@ -3,22 +3,173 @@
 <head>
 <meta charset="utf-8">
 <title>タイトル</title>
-<link href="css/reset.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
+<link href="../css/reset.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<!-- Google Fonts -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
 <!--jQuery本体-->
-<script src="js/jquery-1.11.2.min.js"></script>
+<script src="../js/jquery-1.11.2.min.js"></script>
 
 <!--ready関数-->
 <script>
 $(function(){
 
 });
+
+// フェードイン
+$(window).on('scroll load', function(){        /* ページロード時、またはスクロールされた時*/
+  var scroll = $(this).scrollTop();            /* 現在のスクロール量を測定 */
+  var windowHeight = $(window).height();       /* ウィンドウの高さを測定 */
+  $('.fadeIn').each(function(){                /* 「fadeIn」のクラスがついているものを1つずつ確認し・・・ */
+    var cntPos = $(this).offset().top;         /* 対象の要素の上からの距離を測定 */
+    if(scroll > cntPos - windowHeight + windowHeight / 3){  /* 要素がある位置までスクロールされていたら */
+      $(this).addClass('active');              /* 「active」のクラスを付与 */
+    }
+  });
+});
 </script>
 
 </head>
 
 <body>
+<main class="About">
+    <section class="profile-bgc">
+        <div class="inner">
+            <div class="about">
+                <h2>About</h2>
+                <p class="ja">私について</p>
+                <div class="flex-pc container fadeIn">
+                    <img src="../img/face_illust.png" alt="佐藤菜々果の似顔絵" width="680" height="916">
+                    <div class="txt">
+                        <h3>Sato Nanaka</h3>
+                        <p>
+                            2003年埼玉県生まれ。<br>
+                            高校卒業後は主に飲食店のアルバイトとして接客業務に従事していましが、幼いころから好きだったデザインに関する職に携わりたいと思い始めたころWebデザイナーという職業に出会いました。<br>
+                            Webデザイナーになるため2025年6月から職業訓練校へ通い、Webデザインやコーディングについて学んでいます。<br>
+                            デザインや見た方によって感じ方はそれぞれだと思いますが、その方の心に響くものを目指して制作しています。
+                        </p> <!-- 軽い自己紹介 -->
+                    </div>
+                </div>
+                <div class="skill">
+                    <h2>Skill</h2>
+                    <p class="ja">できること</p>
+                    <div class="flex-pc">
+                        <div class="app-skill">
+                            <div class="flex fadeIn">
+                                <div class="app"><h3>Ai</h3></div>
+                                <p class="circle1"></p>
+                                <p class="circle1"></p>
+                                <p class="circle1"></p>
+                                <p class="circle0"></p>
+                                <p class="circle0"></p>
+                            </div>
+                            <div class="flex fadeIn">
+                                <div class="app"><h3>Ps</h3></div>
+                                <p class="circle1"></p>
+                                <p class="circle1"></p>
+                                <p class="circle1"></p>
+                                <p class="circle1"></p>
+                                <p class="circle0"></p>
+                            </div>
+                            <div class="flex fadeIn">
+                                <div class="app"><h3>Id</h3></div>
+                                <p class="circle1"></p>
+                                <p class="circle1"></p>
+                                <p class="circle0"></p>
+                                <p class="circle0"></p>
+                                <p class="circle0"></p>
+                            </div>
+                            <div class="flex fadeIn">
+                                <div class="app"><img src="../img/figmalogo.png" alt="figma" width="225" height="225" class="figmalogo"></div>
+                                <p class="circle1"></p>
+                                <p class="circle1"></p>
+                                <p class="circle1"></p>
+                                <p class="circle0"></p>
+                                <p class="circle0"></p>
+                            </div>
+                        </div>
+                        <div class="app-skill">
+                            <div class="flex fadeIn">
+                                <div class="app"><h3>Ai</h3></div>
+                                <p class="circle1"></p>
+                                <p class="circle1"></p>
+                                <p class="circle1"></p>
+                                <p class="circle1"></p>
+                                <p class="circle1"></p>
+                            </div>
+                            <div class="flex fadeIn">
+                                <div class="app"><h3>Ps</h3></div>
+                                <p class="circle1"></p>
+                                <p class="circle1"></p>
+                                <p class="circle1"></p>
+                                <p class="circle0"></p>
+                                <p class="circle0"></p>
+                            </div>
+                            <div class="flex fadeIn">
+                                <div class="app"><h3>Id</h3></div>
+                                <p class="circle1"></p>
+                                <p class="circle1"></p>
+                                <p class="circle1"></p>
+                                <p class="circle1"></p>
+                                <p class="circle1"></p>
+                            </div>
+                            <div class="flex fadeIn">
+                                <div class="app"><img src="../img/figmalogo.png" alt="figma" width="225" height="225" class="figmalogo"></div>
+                                <p class="circle1"></p>
+                                <p class="circle1"></p>
+                                <p class="circle1"></p>
+                                <p class="circle1"></p>
+                                <p class="circle1"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="inner">
+            <div class="strength">
+                <h2>Strength</h2>
+                <p class="ja">私の強み</p>
+                <div class="flex-pc container">
+                    <div class="strength-box fadeIn">
+                        <h4 class="jpn-h4">コミュニケーション能力</h4>
+                        <p>居酒屋のアルバイトを通して人と話すことの楽しさを感じました。<br>
+                            デザイナーとしても、クライアントの意図を読み取ったりチーム制作での情報共有だったり、様々な場面で生かしていきます。</p>
+                    </div>
+                    <div class="strength-box fadeIn">
+                        <h4 class="jpn-h4">努力家</h4>
+                        <p>目標達成のためやるべきことを分析し行動に移すことができます。<br>
+                            常に向上心を忘れず学び続ける努力を大切にし,成長し続けるデザイナーになります。</p>
+                    </div>
+                    <div class="strength-box fadeIn">
+                        <h4 class="jpn-h4">学習意欲</h4>
+                        <p>時代の流れに合わせたデザインや新しい情報に常にアンテナを張り、変化の多い業界において新しいスキルや知識を柔軟に取り入れることで会社やチームの成長に貢献できます。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <section class="footer">
+        <div class="inner">
+            <div class="flex">
+                <a href="../index.html"><p class="w600">Home</p></a>
+                <a href="index.html"><p class="w600">About</p></a>
+                <a href="../index.html#works"><p class="w600">Works</p></a>
+            </div>
+            <p class="copyright">© 2025 Sato Nanaka's Portfolio</p>
+        </div>
+    </section>
 
+
+
+
+            
 </body>
 
 </html>
