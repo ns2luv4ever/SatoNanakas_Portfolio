@@ -111,7 +111,12 @@ a{
 
 /* 見出し */
 h1{
-
+  color: #f4f4f4;
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 4rem;
+  font-weight: 600;
+  font-style: normal;
 }
 h2{
   color: #222221;
@@ -263,7 +268,7 @@ body{
 }
 .inner{
   max-width: 1200px;
-  padding: 0 1.5%;
+  padding: 0 5%;
   margin: 0 auto;
   /* border: 1px solid #000; */
 }
@@ -272,9 +277,25 @@ body{
 /* ーーーーー */
 /* TOPページ */
 /* ーーーーー */
+.fv{
+  background-color: #707ab8;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 5%;
+}
+.fv img{
+  width: 50vw;
+}
+
+
 .profile-bgc{
   background-color: #707ab8;
   width: 100%;
+  padding: 15% 0 0 0;
 }
 .about{
   margin: 0 auto;
@@ -373,6 +394,21 @@ body{
 }
 .top .works .container .piece img{
   width: 95%;
+}
+
+@media screen and (max-width: 750px) {
+	/* 750px以下に適用されるCSS（タブレット用） */
+
+  html{
+    font-size: 12px;
+  }
+
+
+}
+
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
 }
 
 

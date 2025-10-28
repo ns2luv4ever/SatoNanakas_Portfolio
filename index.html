@@ -16,6 +16,8 @@
 <!--jQuery本体-->
 <script src="js/jquery-1.11.2.min.js"></script>
 
+<!-- ビューポート -->
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
 
 <!--ready関数-->
 <!-- フェードイン -->
@@ -32,8 +34,8 @@ $(window).on('scroll load', function(){        /* ページロード時、また
 });
 </script>
 
+<!-- ハンバーガー -->
 <script>
-// ハンバーガー
 function menuOnClick() {
   document.getElementById("menu-bar").classList.toggle("change");
   document.getElementById("nav").classList.toggle("change");
@@ -41,6 +43,21 @@ function menuOnClick() {
 }
 </script>
 
+<!-- 上下アニメーション -->
+<script>
+$(function () {
+    setTimeout('rect()'); //アニメーションを実行
+});
+
+function rect() {
+    $('#rect').animate({
+        marginTop: '-=10px'
+    }, 800).animate({
+        marginTop: '+=10px'
+    }, 800);
+    setTimeout('rect()', 1600); //アニメーションを繰り返す間隔
+}
+</script>
 </head>
 
 <body>
@@ -62,6 +79,13 @@ function menuOnClick() {
 
 <div class="menu-bg" id="menu-bg"></div>
 
+<!-- ファーストビュー -->
+<header>
+    <div class="fv">
+        <h1>Sato Nanaka's</h1>
+        <div id="rect"><img src="img/fv_image.png" alt="PORTFOLIO" width="776" height="466"></div>
+    </div>
+</header>
 
 <main class="top">
     <section class="profile-bgc">
