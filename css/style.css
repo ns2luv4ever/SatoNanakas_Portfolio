@@ -367,24 +367,25 @@ body{
 }
 
 
-.top .works{
+.works{
   background-color: #f4f4f4;
   /* border: 1px solid #000; */
   padding: 3% 0 5% 0;
 }
-.top .works .container{
+.works .container{
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 3% auto 3% auto;
   /* border: 1px solid #000; */
 }
-.top .works .container .list{
+.works .container .list{
   gap: 6%;
   margin-top: 6%;
+  display: flex;
   /* border: 1px solid #000; */
 }
-.top .works .container .piece{
+.works .container .piece{
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -392,38 +393,9 @@ body{
   border-radius: 50px;
   padding: 6% 4%;
 }
-.top .works .container .piece img{
+.works .container .piece img{
   width: 95%;
 }
-
-@media screen and (max-width: 750px) {
-	/* 750px以下に適用されるCSS */
-
-  html{
-    font-size: 14px;
-  }
-  .work_page .f4 .wrapper .flex-pc{
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid #000;
-  }
-  .work_page .wrapper{
-    border: 10px solid #222221;
-    border-radius: 120px;
-    margin: 0 1% 0;
-    padding: 3% 7% 5%;
-  }
-  .work_page .flex-start img{
-    width: 80%;
-  }
-
-}
-
-
-@media screen and (max-width: 480px) {
-	/* 480px以下に適用されるCSS（スマホ用） */
-}
-
 
 
 /* ーーーーーー */
@@ -491,37 +463,8 @@ body{
   background-color: #f4f4f4;
   padding: 4% 0 0 0;
 }
-.work_page .works{
-  background-color: #f4f4f4;
-  /* border: 1px solid #000; */
-  padding: 3% 0 5% 0;
-}
-.work_page .works .container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 3% auto 3% auto;
-  /* border: 1px solid #000; */
-}
-.work_page .works .container .list{
-  gap: 6%;
-  margin-top: 6%;
-  /* border: 1px solid #000; */
-}
-.work_page .works .container .piece{
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  border: 9px solid #222221;
-  border-radius: 50px;
-  padding: 6% 4%;
-}
-.work_page .works .container .piece img{
-  width: 95%;
-}
-
-
 .work_page .flex-start{
+  display: flex;
   align-items: flex-start;
   justify-content: center;
   /* border: 1px solid #000; */
@@ -559,4 +502,77 @@ body{
 }
 .kanpu img{
   width: 50%;
+}
+
+
+/* レスポンシブ */
+@media screen and (max-width: 780px) {
+	/* 780px以下に適用されるCSS */
+
+  html{
+    font-size: 14px;
+  }
+  .fv img{
+  width: 70vw;
+  }
+  .work_page .f4 .flex-pc{
+    flex-direction: column;
+    align-items: center;
+    padding: 7% 5% 0;
+    /* border: 1px solid #000; */
+  }
+  .work_page .wrapper{
+    border-radius: 100px;
+  }
+  .work_page .flex-start img{
+    width: 80%;
+    margin-bottom: 7%;
+  }
+  .works .container .list {
+    gap: 3%;
+    margin-top: 4%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+
+  html{
+    font-size: 11px;
+  }
+  .fv img{
+  width: 85vw;
+  }
+  .shousai-btn {
+    background-color: #eca8c6;
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: 5px solid #222221;
+    box-shadow: 0px 10px 0px -2px #777777;
+  }
+  .work_page .wrapper {
+    border: 8px solid #222221;
+    border-radius: 50px;
+  }
+  .kanpu img{
+    width: 80%;
+  }
+  .flex-pc{
+    flex-direction: column;
+  }
+  .works .container .list{
+    gap: 0;
+    /* border: 1px solid #000; */
+  }
+  .works .container .piece{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    border: 7px solid #222221;
+    border-radius: 35px;
+    padding: 6% 4%;
+    width: 92%;
+    margin: 15px auto 0;
+  }
 }
