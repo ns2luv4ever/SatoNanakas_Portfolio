@@ -550,12 +550,46 @@ body{
     border: 5px solid #222221;
     box-shadow: 0px 10px 0px -2px #777777;
   }
+  .about{
+  margin: 0 auto;
+  background-color: #f4f4f4;
+  border-radius: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 8px solid #222221;
+  padding: 3% 3% 5%;
+}
+.top .skill .container{
+  gap:  5%;
+  margin: 3% auto 3% auto;
+  width: 100%;
+  /* border: 1px solid #000; */
+  align-items: center;
+  justify-content: center;
+}
+.top .skill .container .skill-box{
+  width: 85%;
+  background-color: #f4f4f4;
+  border: 10px solid #222221;
+  border-radius: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3%;
+}
+
+  .about .txt{
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  }
   .work_page .wrapper {
     border: 8px solid #222221;
     border-radius: 50px;
   }
   .kanpu img{
-    width: 80%;
+    width: 95%;
   }
   .flex-pc{
     flex-direction: column;
