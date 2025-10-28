@@ -253,6 +253,14 @@ body{
   padding: 5px 15px;
   margin: 1.5%;
 }
+/* 作品　チーム製作　座布団 */
+.kadomaru-band2{
+  color: #f4f4f4;
+  background-color: #eca8c6;
+  border-radius: 15px;
+  padding: 5px 15px;
+  margin: 1.5%;
+}
 .inner{
   max-width: 1200px;
   padding: 0 1.5%;
@@ -438,6 +446,7 @@ body{
 .only-right-scroll{
   justify-content: space-between;
 	position: relative;
+  gap: 5%;
 }
   /* 左の画像エリア */
   .image-area {
@@ -465,7 +474,28 @@ body{
   /* 本文エリア */
   .content {
     width: 50%;
-    padding: 25% 3% 0;
+    padding: 5% 3% 0;
     background: #f4f4f4;
   }
+.only-right-scroll  .txt-content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
+.work_1 .only-right-scroll .content .ja{
+  margin: 0 0 10% 0;
+}
+.kanpu{
+  margin: 15% 0 0;
+  padding: 3% 0 6% 0;
+  border: 1px solid #000;
+  text-align: center;
+}
+.kanpu .ja{
+  margin: 0 0 5% 0;
+}
+.kanpu img{
+  width: 90%;
+  
+}
