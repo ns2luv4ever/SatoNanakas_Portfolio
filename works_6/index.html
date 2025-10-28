@@ -3,21 +3,160 @@
 <head>
 <meta charset="utf-8">
 <title>タイトル</title>
-<link href="css/reset.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
+<link href="../css/reset.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<!-- Google Fonts -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
 <!--jQuery本体-->
-<script src="js/jquery-1.11.2.min.js"></script>
+<script src="../js/jquery-1.11.2.min.js"></script>
 
 <!--ready関数-->
 <script>
 $(function(){
 
 });
-</script>
 
+// フェードイン
+$(window).on('scroll load', function(){        /* ページロード時、またはスクロールされた時*/
+  var scroll = $(this).scrollTop();            /* 現在のスクロール量を測定 */
+  var windowHeight = $(window).height();       /* ウィンドウの高さを測定 */
+  $('.fadeIn').each(function(){                /* 「fadeIn」のクラスがついているものを1つずつ確認し・・・ */
+    var cntPos = $(this).offset().top;         /* 対象の要素の上からの距離を測定 */
+    if(scroll > cntPos - windowHeight + windowHeight / 3){  /* 要素がある位置までスクロールされていたら */
+      $(this).addClass('active');              /* 「active」のクラスを付与 */
+    }
+  });
+});
+
+</script>
 </head>
 
 <body>
+<main class="work_page">
+    <section class="f4">
+        <div class="inner">
+          <div class="wrapper">
+            <div class="text-center">
+              <h2>Works</h2>
+              <p class="ja">制作したもの</p>
+            </div>
+            <div class="flex-pc flex-start">
+              <!-- 画像 -->
+                <img src="../img/glamping_mockup.png" alt="架空のグランピング施設のサイト" width="510" height="307" class="mockup fadeIn">
+              <!-- 本文のブロック -->
+                <div class="fadeIn txt-content">
+                  <p class="kadomaru-band2">チーム製作</p>
+                  <h4 class="jpn-h4">【仮想サイト】<br>&emsp;グランピング施設のサイト</h4><br>
+                  <h5>概要</h5>
+                  <p>お子さんがいる家族層向けの架空のグランピング施設のブランドサイトを制作しました。</p><br>
+                  <a href="../glamping_site_dombura/" target="_blank" class="shousai-btn">サイトを見る　→</a>
+                  <h5>担当内容</h5>
+                  <p>企画/デザイン/コーディング<br>
+                    （主にTOPページ、くつろぐページ、Informationページ、プライバシーポリシーページを担当しました。）</p>
+                  <h5>ベネフィット・コンバージョン</h5>
+                  <p>グランピングって難しそう...という不安をなくし、行ってみたいと思ってもらう</p>
+                  <h5>ターゲット</h5>
+                  <p>キャンプやグランピングをしたことがなく<br>
+                      難しそうと不安に感じている小さなお子さんがいる家族<br>
+                      大人よりも子どもに楽しんでもらいたいと思っている方</p>
+                  <h5>コンセプト</h5>
+                  <p>「背景に動きがある・遊び心がある」を第一に意識しました。<br>
+                    親子で楽しみながら見ていけるようボタンやあしらいに動きをつけ、<br>
+                    自然のなかで過ごす楽しさを表現しています。<br>
+                    静的なページの中に小さな動きを加えることで、<br>
+                    訪問者に遊び心と親しみやすさを感じてもらえる工夫をしています。<br>
+                    色は白や淡いパステルカラーを基調に、アクセントで黄色を使っています。<br>
+                    高級感よりも「親しみやすさ」「清潔感」「明るさ」を重視しました。</p>
+                  <h5>制作時間</h5>
+                  <p>企画時間：16h<br>
+                      制作時間：40h</p>
+                  <h5>制作時期</h5>
+                  <p>2025年10月</p>
+                  <h5>
+                </div>
+            </div>
+          </div>
+          <div class="kanpu">
+            <h3>Top page</h3>
+            <p class="ja">トップページ</p>
+            <img src="../img/ring_screen.png" alt="架空のファッションリングブランドサイト TOPページのスクリーンショット" width="1766" height="10126" class="fadeIn">
+          </div>
+        </div>
+    </section>
+          <section class="works">
+            <div class="inner">
+                <div class="container">
+                  <h2>Works</h2>
+                  <p class="ja">ほかの制作物を見る</p>
+                  <div class="flex-pc list">
+                      <a href="../works_6/index.html">
+                          <div class="piece shousai-btn2 fadeIn">
+                              <img src="../img/glamping_mockup.png" alt="架空のグランピング施設のサイト" width="510" height="307">
+                              <p class="kadomaru-band2">チーム製作</p>
+                              <h5>【仮想サイト】グランピング施設のサイト</h5>
+                          </div>
+                      </a>
+                      <a href="../works_2/index.html">
+                          <div class="piece shousai-btn2 fadeIn">
+                              <img src="../img/kosin_mockup.png" alt="架空の建設会社のコーポレートサイト" width="510" height="325">
+                              <p class="kadomaru-band">個人製作</p>
+                              <h5>【仮想サイト】建設会社のコーポレートサイト</h5>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="flex-pc list">
+                      <a href="../works_3/index.html">
+                          <div class="piece shousai-btn2 fadeIn">
+                              <img src="../img/serenatura_mockup.png" alt="架空の化粧品のブランドサイト" width="510" height="325">
+                              <p class="kadomaru-band">個人製作</p>
+                              <h5>【仮想サイト】化粧品ブランドサイト</h5>
+                          </div>
+                      </a>
+                      <a href="../works_4/index.html">
+                          <div class="piece shousai-btn2 fadeIn">
+                              <img src="../img/kawamiyabi_mockup.png" alt="架空の革靴屋のブランドサイト" width="510" height="325">
+                              <p class="kadomaru-band">個人製作</p>
+                              <h5>【仮想サイト】革靴屋のブランドサイト</h5>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="flex-pc list">
+                      <a href="../works_5/index.html">
+                          <div class="piece shousai-btn2 fadeIn">
+                              <img src="../img/taiyouyouchien_mockup.png" alt="架空の幼稚園のサイト" width="510" height="325">
+                              <p class="kadomaru-band">個人製作</p>
+                              <h5>【仮想サイト】幼稚園のサイト</h5>
+                          </div>
+                      </a>
+                      <a href="index.html">
+                          <div class="piece shousai-btn2 fadeIn">
+                              <img src="../img/ring_mockup.png" alt="架空の指輪のブランドサイト" width="510" height="325">
+                              <p class="kadomaru-band">個人製作</p>
+                              <h5>【仮想サイト】ファッションリングサイト</h5>
+                          </div>
+                      </a>
+                  </div>
+                </div>
+            </div>
+          </section>
+
+      <section class="footer">
+          <div class="inner">
+              <div class="flex">
+                  <a href="../index.html"><p class="w600">Home</p></a>
+                  <a href="../about/index.html"><p class="w600">About</p></a>
+                  <a href="../index.html#works"><p class="w600">Works</p></a>
+              </div>
+              <p class="copyright">© 2025 Sato Nanaka's Portfolio</p>
+          </div>
+    </section>
+
 
 </body>
 

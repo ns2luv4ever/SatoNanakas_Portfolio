@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>どんぶら予約ページ</title>
+<link href="../css/reset.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+
+<!-- Google Font -->
+<!-- darumadrop -->
+<!-- zenmaru -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+<!--jQuery本体-->
+<script src="../js/jquery-1.11.2.min.js"></script>
+
+<!--ready関数-->
+<script>
+$(function(){
+
+});
+</script>
+
+<!-- ビューポート -->
+<meta name="viewport" content="width=device-width , initial-scale=1">
+
+</head>
+
+<body>
+<!-- ヘッダー -->
+<header>
+    <div class="box">
+        <a href="../index.html"><img src="../img/header_logo.png" alt="どんぶらロゴマーク" width="115" height="52"></a>   
+        <!-- ハンバーガー用 -->
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div>
+            <nav>
+              <ul class="header-menu">
+                <li><a href="../index.html">Top</a></li>
+                <li><a href="../concept/index.html">Concept</a></li>
+                <li class="dropdown">
+                  <a href="#">Enjoy <span class="tri">▼</span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="../play/index.html">あそぶ→</a></li>
+                    <li><a href="../eat/index.html">たべる→</a></li>
+                    <li><a href="../relax/index.html">くつろぐ→</a></li>
+                    <li><a href="../stay/index.html">とまる→</a></li>
+                  </ul>
+                </li>
+                <li><a href="../info/index.html">Information</a></li>
+                <li><a href="../access/index.html">Access</a></li>
+                <li class="sp-btn"><a href="../res/index.html"><p class="btn">よやくする&nbsp;→</p></a></li>
+              </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="wave"></div>
+</header>
+
+
+<main>
+<!-- 予約ページ→上の文字たち -->
+  <section class="reservation">
+      <p class="jph2">ご予約について</p>
+      <h2>Reserv<span class="blue">a</span>tion</h2>
+      <img src="../img/b_res_123.png" class="one" alt="" width="545" height="35" >
+      <div>
+        <p>プラン選択</p>
+        <p class="gray">ご予約情報入力</p>
+        <p class="gray">ご予約完了</p>
+      </div>
+    <div class="illust">
+      <img src="../img/b_tent_tree2.png" class="b_res_tree1" alt="木のイラスト">
+      <img src="../img/b_guide_tree1.png" class="b_res_tree2" alt="木のイラスト">
+      <img src="../img/b_res_family.png" class="b_res_family" alt="家族のイラスト">
+    </div>
+  </section>
+
+<!-- 予約ページ→プラン選択 -->
+  <section class="plan">
+      <div class="first">
+        <div class="container">
+        	<div class="tab_box">
+        		<input type="radio" id="radio1" name="tabs" checked />
+        		<label class="tab" for="radio1">ご宿泊プラン(６)</label>
+        		<input type="radio" id="radio2" name="tabs" />
+        		<label class="tab" for="radio2">日帰りプラン(３)</label>
+            <div class="tab_con1" id="tb1">
+        <!-- こもれびテントここから -->
+              <div class="restent">
+                <div class="left">
+                  <img src="../img/b_res_ko.png" alt="こもれびテントの写真" width="360" height="200">
+                  <h2>こもれびテント</h5>
+                  <a href="../stay/index.html#komorebi" class="txt18">テントについて詳しくみる&nbsp;→</a>
+                </div>
+                <div class="right">
+                  <div class="top">
+                    <div>
+                      <img src="../img/b_res_tentbe.png" alt="ベーシックプランの写真" width="170" height="110">
+                    </div>
+                    <div>
+                      <p>【ベーシックプラン】手ぶらで気軽に楽しむ定番BBQ</p>
+                      <div class="mo">
+                        <div>
+                          <p class="mini">1泊4名</p>
+                          <p class="price">¥38,600~</p>
+                        </div>
+                        <a href="#"><p class="btn">よやくする&nbsp;→</p></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="center">
+                    <div>
+                      <img src="../img/b_res_tentpu.png" alt="プレミアムプランの写真" width="170" height="110">
+                    </div>
+                      <div>
+                      <p>【プレミアムプラン】どんぶらの特選素材を味わう贅沢BBQ</p>
+                      <div class="mo">
+                        <div>
+                          <p class="mini">1泊4名</p>
+                          <p class="price">¥44,600~</p>
+                        </div>
+                        <a href="#"><p class="btn">よやくする&nbsp;→</p></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bottom">
+                    <div>
+                      <img src="../img/b_res_tentmo.png" alt="持ち込みプランの写真" width="170" height="110">
+                    </div>
+                    <div>
+                      <p>【持ち込みプラン】お好きな食材でオリジナルBBQ</p>
+                      <div class="mo">
+                        <div>
+                          <p class="mini">1泊4名</p>
+                          <p class="price">¥36,000~</p>
+                        </div>
+                        <a href="#"><p class="btn">よやくする&nbsp;→</p></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        <!-- こもれびテントここまで -->
+        <!-- おおぞらテント -->
+              <div class="restent">
+                <div class="left">
+                  <img src="../img/b_res_oo.png" alt="こもれびテントの写真" width="360" height="200">
+                  <h2>おおぞらテント</h5>
+                  <a href="../stay/index.html#oozora" class="txt18">テントについて詳しくみる&nbsp;→</a>
+                </div>
+                <div class="right">
+                  <div class="top">
+                    <div>
+                      <img src="../img/b_res_tentbe.png" alt="ベーシックプランの写真" width="170" height="110">
+                    </div>
+                    <div>
+                      <p>【ベーシックプラン】手ぶらで気軽に楽しむ定番BBQ</p>
+                      <div class="mo">
+                        <div>
+                          <p class="mini">1泊4名</p>
+                          <p class="price">¥46,600~</p>
+                        </div>
+                        <a href="#"><p class="btn">よやくする&nbsp;→</p></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="center">
+                    <div>
+                      <img src="../img/b_res_tentpu.png" alt="プレミアムプランの写真" width="170" height="110">
+                    </div>
+                    <div>
+                      <p>【プレミアムプラン】どんぶらの特選素材を味わう贅沢BBQ</p>
+                      <div class="mo">
+                        <div>
+                          <p class="mini">1泊4名</p>
+                          <p class="price">¥52,600~</p>
+                        </div>
+                        <a href="#"><p class="btn">よやくする&nbsp;→</p></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bottom">
+                    <div>                 
+                      <img src="../img/b_res_tentmo.png" alt="持ち込みプランの写真" width="170" height="110">
+                    </div>
+                    <div>
+                      <p>【持ち込みプラン】お好きな食材でオリジナルBBQ</p>
+                      <div class="mo">
+                        <div>
+                          <p class="mini">1泊4名</p>
+                          <p class="price">¥44,000~</p>
+                        </div>
+                        <a href="#"><p class="btn">よやくする&nbsp;→</p></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        <!-- おおぞらテントここまで -->
+            </div>
+            <div class="tab_con2" id="tb2">
+        <!-- ベーシックここから -->
+              <div class="reday">
+                <div class="left">
+                  <img src="../img/b_res_daybe.png" alt="ベーシックプランの写真" width="360" height="200">
+                </div>
+                <div class="right">
+                  <h2>ベーシック日帰りプラン</h2>
+                  <p>川遊び＋手ぶらで気軽に楽しむ定番BBQ</p>
+                  <div class="mo">
+                    <div>
+                      <p class="mini">4名</p>
+                      <p class="price">¥13,500~</p>
+                    </div>
+                    <a href="#"><p class="btn">よやくする&nbsp;→</p></a>
+                  </div>
+                </div>
+              </div>
+        <!-- ベーシックここまで -->
+        <!-- プレミアムここから -->
+              <div class="reday">
+                <div class="left">
+                  <img src="../img/b_res_daypu.png" alt="プレミアムプランの写真" width="360" height="200">
+                </div>
+                <div class="right">
+                  <h2>プレミアム日帰りプラン</h2>
+                  <p>川遊び＋どんぶらの特選素材を味わう贅沢BBQ</p>
+                  <div class="mo">
+                    <div>
+                      <p class="mini">4名</p>
+                      <p class="price">¥19,500~</p>
+                    </div>
+                    <a href="#"><p class="btn">よやくする&nbsp;→</p></a>
+                  </div>
+                </div>
+              </div>
+        <!-- プレミアムここまで -->
+        <!-- 持ち込みここから -->
+              <div class="reday">
+                <div class="left">
+                  <img src="../img/b_res_daymo.png" alt="持ち込みプランの写真" width="360" height="200">
+                </div>
+                <div class="right">
+                  <h2>持ち込み日帰りプラン</h2>
+                  <p>川遊び＋お好きな食材でオリジナルBBQ</p>
+                  <div class="mo">
+                    <div>
+                      <p class="mini">4名</p>
+                      <p class="price">¥10,000~</p>
+                    </div>
+                    <a href="#"><p class="btn">よやくする&nbsp;→</p></a>
+                  </div>
+                </div>
+              </div>
+        <!-- 持ち込みここまで -->             
+            </div>
+        	</div>
+        </div>
+      </div>
+  </section>
+
+</main>
+
+<!-- フッター -->
+<footer>
+  <img class=back src="../img/footer/footer_01.png" alt="グランピングドームのイラスト" width="3840" height="1188">
+  <div class="footer_block">
+    <div class="footer_block02">
+        <div class="box1">
+            <a href="../index.html"><img src="../img/footer/footer_log.png" class=logo alt="どんぶらロゴマーク" width="226" height="auto"></a>
+            <img src="../img/footer/footer_06.png" alt="〒501-2901岐阜県関市板取00-00TEL：000-1234-5678(FAX兼用)MAIL：donbura@dombura" width="226" height="94" >
+        </div>
+        <div>
+            <a href="#"><img src="../img/footer/footer_02.png" class=Top_of_page alt="ページTopに戻るボタン" width="224" height="225"></a>
+        </div>
+        <div class="box3">
+            <p><a href="../pp/index.html">プライバシーポリシー</a></p>
+            <p>@2025 おやこのもり どんぶら</p>
+        </div>
+    </div>
+  </div>
+</footer> 
+
+<!-- ハンバーガー用JS -->
+ <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.querySelector(".hamburger");
+    const menu = document.querySelector(".header-menu");
+
+    hamburger.addEventListener("click", function() {
+      hamburger.classList.toggle("active");
+      menu.classList.toggle("active");
+    });
+  });
+</script>
+
+</body>
+
+</html>

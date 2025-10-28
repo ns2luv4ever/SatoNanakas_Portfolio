@@ -1,0 +1,350 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>どんぶらとまる</title>
+<link href="../css/reset.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+
+<!-- Google Font -->
+<!-- darumadrop -->
+<!-- zenmaru -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+<!--jQuery本体-->
+<script src="../js/jquery-1.11.2.min.js"></script>
+
+<!--ready関数-->
+<script>
+$(function(){
+
+});
+</script>
+
+<!-- ビューポート -->
+<meta name="viewport" content="width=device-width , initial-scale=1">
+
+</head>
+
+<body>
+<!-- ヘッダー -->
+<header>
+    <div class="box">
+        <a href="../index.html"><img src="../img/header_logo.png" alt="どんぶらロゴマーク" width="115" height="52"></a>   
+        <!-- ハンバーガー用 -->
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div>
+            <nav>
+              <ul class="header-menu">
+                <li><a href="../index.html">Top</a></li>
+                <li><a href="../concept/index.html">Concept</a></li>
+                <li class="dropdown">
+                  <a href="#">Enjoy <span class="tri">▼</span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="../play/index.html">あそぶ→</a></li>
+                    <li><a href="../eat/index.html">たべる→</a></li>
+                    <li><a href="../relax/index.html">くつろぐ→</a></li>
+                    <li><a href="../stay/index.html">とまる→</a></li>
+                  </ul>
+                </li>
+                <li><a href="../info/index.html">Information</a></li>
+                <li><a href="../access/index.html">Access</a></li>
+                <li class="sp-btn"><a href="../res/index.html"><p class="btn">よやくする&nbsp;→</p></a></li>
+              </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="wave"></div>
+</header>
+
+
+<main>
+<!-- とまる→ファーストビュー -->
+    <section class="hero">
+        <img src="../img/b_hero_stay.png" class="hero_img" alt="子供がベッドに座っている" width="1920" height="1180">
+        <div class="wave_top">
+            <h2><span class="orange">と</span>まる</h2>
+            <img src="../img/b_hero_wave1.png" alt="" width="610" height="152">
+        </div>
+        <div class="wave_under">
+            <div>
+                <h3><img src="../img/b_stay_h3.png" alt="自然に包まれて眠ろう" width="490" height="97"></h3>
+                <p class="txt18">ドームで過ごす夜は、日常を忘れる小さな冒険！</p>
+            </div>
+            <img src="../img/b_hero_wave2.png" alt="" width="1200" height="350">
+        </div>
+    </section>
+
+
+<!-- とまる→テント紹介 -->
+<section class="tent">
+  <div class="ye">
+    <div class="first">
+      <h4 id="komorebi">テントの紹介</h4>
+      <div class="box1">
+        <img src="../img/b_tent1.png" class="tents" alt="こもれびテントの内装" width="500" height="350">
+        <div>
+          <h5>こもれびテント(定員4名)</h5>
+          <p>森の木漏れ日が差し込む空間で、川のせせらぎを聞きながら、家族だけの時間をお楽しみください。</p>
+          <div><p>【基本設備】シングルベッド2台／エキストラベット2台or布団2枚／エアコン／サーキュレーター／加湿空気清浄機／充電式ランタン／ハンガーラック／冷蔵庫（冷凍庫付き）／電気ケトル／オムツ用ごみ箱（※2歳以下のお子様連れの場合、事前にご用意）
+                <br>※タオル・アメニティ等は受付にてお渡し</p>
+          </div>
+        </div>
+      </div>
+      <div class="illust">
+        <img src="../img/b_tent_lamp.png" class="b_tent_lamp" alt="ランプのイラスト">
+        <img src="../img/b_tent_mountain.png" class="b_tent_mountain" alt="山のイラスト">
+        <img src="../img/b_guide_tree1.png" class="b_tent_tree1" alt="木のイラスト">
+        <img src="../img/b_tent_girl.png" class="b_tent_girl" alt="女の子のイラスト">
+        <img src="../img/b_tent_point1.png" class="b_tent_point1" alt="はじめてのご旅行に！家族でのんびり過ごせる" data-stop>
+        <img src="../img/b_tent_tree2.png" class="b_tent_tree2" alt="木のイラスト">
+        <img src="../img/b_tent_family.png" class="b_tent_family" alt="家族のイラスト">
+        <img src="../img/b_tent_tree3.png" class="b_tent_tree3" alt="木たちのイラスト">
+      </div>     
+    </div>
+  </div>
+  <div class="re" id="oozora">
+    <div class="first">
+      <div class="box1">
+        <img src="../img/b_tent2.png" class="tents" alt="おおぞらテントの内装" width="500" height="350">
+        <div>
+          <h5>おおぞらテント(定員6名)</h5>
+          <p>夜にはテントの外で満天の星を見上げながら、思い出に残るひとときをどうぞ。</p>
+          <div><p>【基本設備】シングルベッド4台／布団2枚／エアコン／サーキュレーター／加湿空気清浄機／充電式ランタン／ハンガーラック／冷蔵庫（冷凍庫付き）／電気ケトル／オムツ用ごみ箱（※2歳以下のお子様連れの場合、事前にご用意）
+                <br>※タオル・アメニティ等は受付にてお渡し</p>
+          </div>
+        </div>
+      </div>
+      <div class="illust">
+        <img src="../img/b_tent_point2.png" class="b_tent_point2" alt="三世代旅行や5~6人のグループにおすすめ" data-stop>
+        <img src="../img/b_tent_friend.png" class="b_tent_friend" alt="友達のイラスト">
+        <img src="../img/b_tent_tree4.png" class="b_tent_tree4" alt="木と低木のイラスト">
+      </div>   
+    </div>
+  </div>
+</section>
+
+
+<!-- とまる→施設紹介 -->
+<section class="guide">
+  <div class="bu">
+    <div class="first">
+      <h4>施設案内</h4>
+      <img src="../img/b_guide_map.png">
+      <div class="illust">
+        <img src="../img/b_guide_family.png" class="b_guide_family" alt="家族のイラスト">
+        <img src="../img/b_guide_tree1.png" class="b_guide_tree1" alt="木のイラスト">
+        <img src="../img/b_guide_ring.png" class="b_guide_ring" alt="女の子のイラスト">
+        <img src="../img/b_access_plane.png" class="b_guide_plane" alt="飛行機のイラスト">
+      </div>   
+    </div>
+  </div>
+  <div class="gr">
+    <div class="first">
+      <div class="box1">
+        <div class="box2">
+          <img src="../img/b_guide1.png">
+          <div>
+            <h6>受付 (8:00〜21:00)</h6>
+            <p>チェックインはこちらで。調理器具のレンタルや、ドリンクの販売なども行っています。</p>
+          </div>
+        </div>
+        <div class="box2">
+          <img src="../img/b_guide2.png">
+          <div>
+            <h6>駐車場</h6>
+            <p>無料でご利用可能な敷地内駐車場を完備。受付まで徒歩1分。</p>
+          </div>
+        </div>
+      </div>
+      <div class="box1">
+        <div class="box2">
+          <img src="../img/b_guide3.png">
+          <div>
+            <h6>トイレ</h6>
+            <p>清潔な洋式トイレを完備。小さなお子さま連れでも安心してご利用いただけます。</p>
+          </div>
+        </div>
+        <div class="box2">
+          <img src="../img/b_guide4.png">
+          <div>
+            <h6>授乳室</h6>
+            <p>授乳やおむつ替えにご利用いただける専用スペースをご用意。</p>
+          </div>
+        </div>
+      </div>
+      <div class="box1">
+        <div class="box2">
+          <img src="../img/b_guide5.png">
+          <div>
+            <h6>キッズスペース</h6>
+            <p>雨の日でも安心。絵本やおもちゃをそろえたキッズコーナーで、子どもたちものびのび遊べます。</p>
+          </div>
+        </div>
+        <div class="box2">
+          <img src="../img/b_guide6.png">
+          <div>
+            <h6>BBQ場 (10:00〜20:00)</h6>
+            <p>手ぶらでも楽しめるBBQ場。森と川の風を感じながら、家族みんなでアウトドア料理をお楽しみください。</p>
+          </div>
+        </div>
+      </div>
+      <div class="illust">
+        <img src="../img/b_tent_tree4.png" class="b_guide_tree2" alt="木と低木のイラスト">
+        <img src="../img/b_guide_kids.png" class="b_guide_kids" alt="子供のイラスト">
+        <img src="../img/b_tent_tree3.png" class="b_guide_tree3" alt="木たちのイラスト">
+      </div>   
+    </div>
+  </div>
+
+</section>
+
+
+<!-- とまる→よくある質問 -->
+  <section class="q_a">
+    <div class="qa">
+      <div class="qa_box01">
+        <p class=jph2>ご宿泊について</p>
+        <h4>よくある質問</h4>
+      </div>  
+      <div class="qa_block01">
+        <dl class="accordion js-accordion">
+          <div class="accordion__item js-accordion-trigger">
+            <dt class="accordion__title"><p><span class="Q">Q.</span> 6人以上で泊まりたい場合はどうしたらいいですか？</p></dt>
+            <dd class="accordion__content"><p><span class="A">A.</span> 1棟あたりの定員は最大6名となります。7名以上でご利用の場合は、2棟のご予約をお願いいたします。隣同士のテントを確保いたしますので、ご予約時にその旨をお知らせください。</p></dd>
+          </div>
+          <div class="accordion__item js-accordion-trigger">
+            <dt class="accordion__title"><p><span class="Q">Q.</span> 小さな子どもがいても安心して泊まれますか？</p></dt>
+            <dd class="accordion__content"><p><span class="A">A.</span> はい、お子さま連れのご家族にも安心な環境を整えています。テント間は10m以上離れており、のびのび遊べる芝生広場もあります。また、施設内には授乳室・おむつ替え台・子ども用トイレを完備。小さなお子さま連れでも安心してご滞在いただけます。</p></dd>
+          </div>
+          <div class="accordion__item js-accordion-trigger">
+            <dt class="accordion__title"><p><span class="Q">Q.</span> 虫が苦手なんですが、大丈夫でしょうか？</p></dt>
+            <dd class="accordion__content"><p><span class="A">A.</span> 自然の中の施設のため、虫は多少発生しますが、各テントには防虫ネットや虫よけグッズをご用意しています。また、管理スタッフが定期的に施設周辺を点検・清掃しており、安心してお過ごしいただける環境づくりを心がけています。</p></dd>                        
+          </div>
+          <div class="accordion__item js-accordion-trigger">
+            <dt class="accordion__title"><p><span class="Q">Q.</span> テントの中にはどんな設備がありますか？</p></dt>
+            <dd class="accordion__content"><p><span class="A">A.</span> 各テントには冷暖房・冷蔵庫・コンセント・電気ケトルを完備しています。また、ベッドのほかに布団スタイルも選べるので、小さなお子さま連れでも安心です。</p></dd>
+           </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+
+        <!-- ================
+            photo　gallery
+        ================ -->
+
+        <section class="white">
+
+            <div class="photo_block">
+
+                <div class="illust">
+
+                    <img class="photo05" src="../img/footer/footer_05.png" alt="学生のイラスト" >
+                    <img class="photo04" src="../img/footer/footer_04.png" alt="カヌーのイラスト" > 
+                
+                </div>
+
+                <div class="photo_box">
+                    <p class="jph3">フォトギャラリー</p>  
+                    <h2>Ph<span class="red">o</span>to gall<span class="blue">e</span>ry</h2>
+                </div>
+
+            </div> 
+
+
+            <div class="slider-wrapper">
+
+                <ul class="slider">
+
+                    <li class="slide">
+                     <img src="../img/photo_gallery/photo01.jpg" alt="スイカを食べる家族の写真" width="640" height="auto">
+                    </li>
+
+                    <li class="slide">
+                     <img src="../img/photo_gallery/Photo02.jpg" alt="お茶を飲む男の子の写真" width="640" height="auto">
+                    </li>
+
+                    <li class="slide">
+                     <img src="../img/photo_gallery/Photo03.jpg" alt="バーベキューをする家族の写真"width="640" height="auto">
+                    </li>
+
+                </ul>
+                <ul class="slider">
+                    <li class="slide">
+                    <img src="../img/photo_gallery/Photo04.jpg" alt="スイカの服を着た赤ちゃんの写真" width="640" height="auto">
+                    </li>
+                    <li class="slide">
+                    <img src="../img/photo_gallery/photo05.jpg" alt="親子の写真(子供を抱っこしている)" width="640" height="auto">
+                    </li>
+                    <li class="slide">
+                    <img src="../img/photo_gallery/photo06.jpg" alt="川で遊んでいる子供の写真" width="640" height="auto">
+                    </li>
+                </ul>
+
+            </div>
+
+</main>
+
+
+<!-- フッター -->
+<footer>
+  <img class=back src="../img/footer/footer_01.png" alt="グランピングドームのイラスト" width="3840" height="1188">
+  <div class="footer_block">
+    <div class="footer_block02">
+        <div class="box1">
+            <a href="../index.html"><img src="../img/footer/footer_log.png" class=logo alt="どんぶらロゴマーク" width="226" height="auto"></a>
+            <img src="../img/footer/footer_06.png" alt="〒501-2901岐阜県関市板取00-00TEL：000-1234-5678(FAX兼用)MAIL：donbura@dombura" width="226" height="94" >
+        </div>
+        <div>
+            <a href="#"><img src="../img/footer/footer_02.png" class=Top_of_page alt="ページTopに戻るボタン" width="224" height="225"></a>
+        </div>
+        <div class="box3">
+            <p><a href="../pp/index.html">プライバシーポリシー</a></p>
+            <p>@2025 おやこのもり どんぶら</p>
+        </div>
+    </div>
+  </div>
+</footer> 
+
+<!-- ハンバーガー用JS -->
+ <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.querySelector(".hamburger");
+    const menu = document.querySelector(".header-menu");
+
+    hamburger.addEventListener("click", function() {
+      hamburger.classList.toggle("active");
+      menu.classList.toggle("active");
+    });
+  });
+</script>
+
+<!-- ファーストビュー用JS -->
+<script>
+  function setHeroHeight() {
+    const hero = document.querySelector('.hero');
+    const bgImg = document.querySelector('.hero_img');
+    hero.style.height = bgImg.getBoundingClientRect().height + 'px';
+  }
+  // ページ読み込み時
+  window.addEventListener('load', setHeroHeight);
+  // ブラウザ幅変更時
+  window.addEventListener('resize', setHeroHeight);
+</script>
+
+<!-- よくある質問用JS -->
+   <script src="../js/plugin/jquery-1.11.2.min.js"></script>
+    <script src="../js/plugin/slick.min.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>
