@@ -13,7 +13,6 @@ a{
 #menu {
   z-index: 2;
 }
-
 #menu-bar {
   width: 45px;
   height: 40px;
@@ -23,7 +22,6 @@ a{
   cursor: pointer;
   position: fixed;
 }
-
 .bar {
   height: 8px;
   width: 100%;
@@ -32,45 +30,40 @@ a{
   border-radius: 5px;
   transition: 0.3s ease;
 }
-
 #bar1 {
   transform: translateY(-4px);
 }
-
 #bar3 {
   transform: translateY(4px);
 }
-
 .nav {
   transition: 0.3s ease;
   display: none;
 }
-
 .nav ul {
-  padding: 0 22px;
+  padding: 80px 0 0 30px;
+  /* border: 1px solid #000; */
 }
-
 .nav li {
   list-style: none;
-  padding: 12px 0;
+  padding: 10px 0;
 }
-
 .nav li a {
-  color: white;
-  font-size: 20px;
+  color: #f4f4f4;
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 2.5rem;
+  font-weight: 600;
   text-decoration: none;
 }
-
 .nav li a:hover {
-  font-weight: bold;
+  color: #222221;
 }
-
 .menu-bg, #menu {
   top: 0;
   left: 0;
   position: absolute;
 }
-
 .menu-bg {
   z-index: 1;
   width: 0;
@@ -79,32 +72,29 @@ a{
   background: radial-gradient(circle, #eca8c6, #eca8c6);
   border-radius: 50%;
   transition: 0.3s ease;
+  opacity: 0.8;
 }
-
 .change {
   display: block;
+  position: fixed;
 }
-
 .change .bar {
-  background-color: white;
+  background-color: #f4f4f4;
 }
-
 .change #bar1 {
-  transform: translateY(4px) rotateZ(-45deg);
+  transform: translateY(8px) rotateZ(-45deg);
 }
-
 .change #bar2 {
   opacity: 0;
 }
-
 .change #bar3 {
-  transform: translateY(-6px) rotateZ(45deg);
+  transform: translateY(-8px) rotateZ(45deg);
 }
-
 .change-bg {
   width: 520px;
   height: 460px;
   transform: translate(-60%,-30%);
+  position: fixed;
 }
 
 /* フェードイン */
@@ -158,6 +148,13 @@ h4{
 h5{
   color: #222221;
   font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: normal;
+}
+.jpn-h5{
+  color: #222221;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
   font-style: normal;
@@ -256,6 +253,12 @@ body{
   padding: 5px 15px;
   margin: 1.5%;
 }
+.inner{
+  max-width: 1200px;
+  padding: 0 1.5%;
+  margin: 0 auto;
+  /* border: 1px solid #000; */
+}
 
 
 /* ーーーーー */
@@ -265,12 +268,6 @@ body{
   background-color: #707ab8;
   width: 100%;
 }
-.inner{
-  max-width: 1200px;
-  padding: 0 1.5%;
-  margin: 0 auto;
-  /* border: 1px solid #000; */
-}
 .about{
   margin: 0 auto;
   background-color: #f4f4f4;
@@ -279,7 +276,7 @@ body{
   flex-direction: column;
   align-items: center;
   border: 10px solid #222221;
-  padding: 3%;
+  padding: 3% 3% 5%;
 }
 .about .container{
   gap: 5%;
@@ -387,43 +384,17 @@ body{
   align-items: center;
   margin: 8% 0 3% 0;
 }
-.About .skill .app-skill .app{
-  border: 6px solid #222221;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-}
-.About .skill .app-skill{
-  width: 50%;
-}
-.About .skill .flex-pc{
-  gap: 5%;
+.About .skill .flex{
   margin: 5% 0 0 0;
 }
-.About .skill .app-skill .flex{
+.About .skill .app-skill{
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 5px;
-  margin: 0 0 8px 0;
+  padding: 0 2%;
 }
-.About .circle0{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #d1d1d1;/* 背景色 */
-  border: 6px solid #777777;
-}
-.About .circle1{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #eca8c6;/* 背景色 */
-  border: 6px solid #222221;
-}
-.About .figmalogo{
-  width: 60px;
+.About .skill .app-skill img{
+  margin: 0 0 15px;
 }
 
 
@@ -435,7 +406,7 @@ body{
   margin: 4% 0 0 0;
 }
 .About .strength .container{
-  gap:  2%;
+  gap:  1%;
   margin: 3% auto 3% auto;
   width: 100%;
   /* border: 1px solid #000; */
@@ -462,3 +433,39 @@ body{
 .work_1 .f4{
   background-color: #f4f4f4;
 }
+
+/* 左固定右スクロール */
+.only-right-scroll{
+  justify-content: space-between;
+	position: relative;
+}
+  /* 左の画像エリア */
+  .image-area {
+    position: relative;
+    width: 40%;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .image-area img {
+    position: fixed;
+    top: 25%;
+    width: 40%;
+    object-fit: cover;
+  }
+
+  /* 固定解除したとき */
+  .image-area.stop img {
+    position: absolute;
+    top: auto;
+    width: 40%;
+    bottom: 0;
+  }
+
+  /* 本文エリア */
+  .content {
+    width: 50%;
+    padding: 25% 3% 0;
+    background: #f4f4f4;
+  }
+

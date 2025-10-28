@@ -35,6 +35,29 @@ $(window).on('scroll load', function(){        /* ページロード時、また
 });
 
 </script>
+<script>
+    $(function() {
+      var $imageArea = $('#imageArea');
+      var $content = $('#content');
+
+      $(window).on('scroll resize', function() {
+        var scrollY = $(this).scrollTop();
+        var contentBottom = $content.offset().top + $content.outerHeight(); // 本文の下端位置
+        var windowHeight = $(this).height();
+
+        // ウィンドウ下端の位置（＝現在のスクロール位置 + 画面高さ）
+        var windowBottom = scrollY + windowHeight;
+
+        // 本文の下端が画面に来たら固定解除
+        if (windowBottom >= contentBottom) {
+          $imageArea.addClass('stop');
+        } else {
+          $imageArea.removeClass('stop');
+        }
+      });
+    });
+  </script>
+
 
 </head>
 
@@ -42,10 +65,47 @@ $(window).on('scroll load', function(){        /* ページロード時、また
 <main class="work_1">
     <section class="f4">
         <div class="inner">
-            <div class="mv flex-pc">
-                <img src="../img/ring_mockup.png" alt="架空のファッションリングブランドサイト" width="510" height="325">
-                <p class="kadomaru-band">
-                <h3>
+          <div class="flex-pc only-right-scroll">
+            <!-- 画像のブロック -->
+            <div class="image-area" id="imageArea">
+              <img src="../img/ring_mockup.png" alt="架空のファッションリングブランドサイト" width="510" height="325">
+            </div>
+            <!-- 本文のブロック -->
+            <div class="content" id="content">
+              <h2>Works</h2>
+              <p class="ja">制作したもの</p>
+              <p class="kadomaru-band">個人製作</p>
+              <h4 class="jpn-h4">【仮想サイト】<br>&emsp;ファッションリングサイト</h4>
+              <h5>概要</h5>
+              <p>指輪を主に販売する架空のアクセサリーショップのブランドサイトを制作しました。</p>
+              <h5>担当内容</h5>
+              <p>企画/デザイン/コーディング</p>
+              <h5>ベネフィット</h5>
+              <p>パラジウムのブランディングおよび周知</p>
+              <h5>ターゲット</h5>
+              <p>おしゃれをすることが好きな顕在層、20代半ば女性<br>
+                  仕事も少しずつ落ち着いてきて、自分へのご褒美として<br>
+                  今まで安さ重視だったが少しいいものを買いたいと思い始めた方</p>
+              <h5>コンセプト</h5>
+              <p>ターゲットがかわいさと大人っぽさの狭間にあると考え、<br>
+                その二つを融合させたデザインを目指しました。<br>
+                高級感を演出するため見出しのフォントにこだわりつつ、<br>
+                近寄りがたい雰囲気が出ないよう、曲線の多いデザインを取り入れました。<br>
+                パラジウムの輝きを伝えたいのでロゴマークやサイト内に<br>
+                あしらいとしてキラキラマークをちりばめました。</p>
+              <h5>制作時間</h5>
+              <p>企画時間：6h<br>
+                  制作時間：58h</p>
+              <h5>制作時期</h5>
+              <p>2025年8月</p>
+              <h5>
+
+            </div>
+          </div>
+          <h3>Top page</h3>
+          <p class="ja">トップページ</p>
+          <img src="../img/ring_screen.png" alt="架空のファッションリングブランドサイト TOPページのスクリーンショット" width="1766" height="10129">
+
 
 </body>
 
