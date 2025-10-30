@@ -536,14 +536,24 @@ body{
     margin-bottom: 7%;
   }
   .works .container .list {
-    margin-top: 0;
+    margin-top: 0px;
   }
-  .top .works .container .piece{
-    margin-bottom: 15px;
+  .works .container .list .piece h5{
+    font-size: 1.1rem;
   }
-  .top .works .container .ja{
+  .works .container .piece{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border: 8px solid #222221;
+  border-radius: 50px;
+  padding: 6% 4%;
+  margin-bottom: 18px;
+}
+  .works .container .ja{
     margin-bottom: 3%;
   }
+  
 }
 
 @media screen and (max-width: 480px) {
