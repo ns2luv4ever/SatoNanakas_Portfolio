@@ -27,7 +27,7 @@ $(window).on('scroll load', function(){        /* ページロード時、また
   var windowHeight = $(window).height();       /* ウィンドウの高さを測定 */
   $('.fadeIn').each(function(){                /* 「fadeIn」のクラスがついているものを1つずつ確認し・・・ */
     var cntPos = $(this).offset().top;         /* 対象の要素の上からの距離を測定 */
-    if(scroll > cntPos - windowHeight + windowHeight / 3){  /* 要素がある位置までスクロールされていたら */
+    if(scroll > cntPos - windowHeight + windowHeight / 4){  /* 要素がある位置までスクロールされていたら */
       $(this).addClass('active');              /* 「active」のクラスを付与 */
     }
   });
@@ -83,7 +83,7 @@ function rect() {
 <header>
     <div class="fv">
         <h1>Sato Nanaka's</h1>
-        <div id="rect"><img src="img/fv_image.png" alt="PORTFOLIO" width="776" height="466"></div>
+        <div><img id="rect" src="img/fv_image.png" alt="PORTFOLIO" width="776" height="466"></div>
     </div>
 </header>
 
