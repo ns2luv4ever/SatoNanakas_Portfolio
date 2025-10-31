@@ -359,6 +359,10 @@ body{
   align-items: center;
   padding: 3%;
 }
+.top .skill .container .skill-box img{
+  width: 80%;
+  margin: 5% 0;
+}
 .top .skill .container .skill-box .txt{
   padding: 5% 0;
   /* border: 1px solid #000; */
@@ -455,6 +459,11 @@ body{
 }
 .About .strength .strength-box p{
   padding: 5% 0;
+}
+.About .strength .strength-box .jpn-h4{
+  background-color: #eca8c6;
+  padding: 1% 4%;
+  border-radius: 20px;
 }
 
 /* ーーーーーー */
