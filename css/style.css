@@ -193,7 +193,7 @@ p{
 /* 影のあるボタン */
 .shousai-btn{
   background-color: #eca8c6;
-  border-radius: 30px;
+  border-radius: 35px;
   padding: 15px 30px;
   border: 5px solid #222221;
   box-shadow: 0px 10px 0px -2px #777777;
@@ -232,6 +232,7 @@ p{
 .footer{
   background-color: #dc72a0;
   padding: 5% 0 2%;
+  border-top: 10px solid #222221;
 }
 .copyright{
   color: #222221;
@@ -487,8 +488,7 @@ body{
   padding: 7% 0 0 0;
   gap: 3%;
 }
-
-.work_page .flex-start img{
+.work_page .flex-start .mockup{
   width: 60%;
 }
   /* 本文エリア */
@@ -497,7 +497,6 @@ body{
   flex-direction: column;
   align-items: flex-start;
   /* width: 40vw; */
-
 }
 .work_page .content .ja{
   margin: 0 0 10% 0;
@@ -516,8 +515,16 @@ body{
 .kanpu .ja{
   margin: 0 0 5% 0;
 }
-.kanpu img{
+.kanpu .pc-top{
   width: 50%;
+}
+.kanpu .sp-top{
+  width: 20%;
+}
+.work_page .kanpu .responsive_screen{
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5%;
 }
 
 
@@ -540,7 +547,7 @@ body{
   .work_page .wrapper{
     border-radius: 100px;
   }
-  .work_page .flex-start img{
+  .work_page .flex-start .mockup{
     width: 80%;
     margin-bottom: 7%;
   }
@@ -655,7 +662,7 @@ body{
   .top .shousai-btn2{
     border: 8px solid #222221;
   }
-  .work_page .flex-start img{
+  .work_page .flex-start .mockup{
     width: 90%;
     margin-bottom: 7%;
   }
