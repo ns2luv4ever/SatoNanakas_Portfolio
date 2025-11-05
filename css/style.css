@@ -246,6 +246,10 @@ p{
   justify-content: center;
   gap: 6%;
 }
+.footer a p{
+  color: #222221;
+}
+
 /* body中央 */
 body{
   margin: 0 auto;
