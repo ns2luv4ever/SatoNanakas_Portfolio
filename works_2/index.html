@@ -21,18 +21,44 @@
 
 
 <!--ready関数-->
+<!-- フェードイン -->
 <script>
-$(function(){
-
+$(window).on('scroll load', function(){        /* ページロード時、またはスクロールされた時*/
+  var scroll = $(this).scrollTop();            /* 現在のスクロール量を測定 */
+  var windowHeight = $(window).height();       /* ウィンドウの高さを測定 */
+  $('.fadeIn').each(function(){                /* 「fadeIn」のクラスがついているものを1つずつ確認し・・・ */
+    var cntPos = $(this).offset().top;         /* 対象の要素の上からの距離を測定 */
+    if(scroll > cntPos - windowHeight + windowHeight / 3){  /* 要素がある位置までスクロールされていたら */
+      $(this).addClass('active');              /* 「active」のクラスを付与 */
+    }
+  });
 });
+</script>
 
+<!-- ハンバーガー -->
+<script>
+function menuOnClick() {
+  document.getElementById("menu-bar").classList.toggle("change");
+  document.getElementById("nav").classList.toggle("change");
+  document.getElementById("menu-bg").classList.toggle("change-bg");
+}
+</script>
+<script>
+$(function () {
+    $('.nav a[href]').on('click', function(event) {
+        $('#menu-bar').trigger('click');
+    });
+});
+</script>
+
+<script>
 // フェードイン
 $(window).on('scroll load', function(){        /* ページロード時、またはスクロールされた時*/
   var scroll = $(this).scrollTop();            /* 現在のスクロール量を測定 */
   var windowHeight = $(window).height();       /* ウィンドウの高さを測定 */
   $('.fadeIn').each(function(){                /* 「fadeIn」のクラスがついているものを1つずつ確認し・・・ */
     var cntPos = $(this).offset().top;         /* 対象の要素の上からの距離を測定 */
-    if(scroll > cntPos - windowHeight + windowHeight / 9){  /* 要素がある位置までスクロールされていたら */
+    if(scroll > cntPos - windowHeight + windowHeight / 3){  /* 要素がある位置までスクロールされていたら */
       $(this).addClass('active');              /* 「active」のクラスを付与 */
     }
   });
@@ -42,6 +68,24 @@ $(window).on('scroll load', function(){        /* ページロード時、また
 </head>
 
 <body>
+<!-- ハンバーガーメニュー -->    
+<div id="menu">
+  <div id="menu-bar" onclick="menuOnClick()">
+    <div id="bar1" class="bar"></div>
+    <div id="bar2" class="bar"></div>
+    <div id="bar3" class="bar"></div>
+  </div>
+  <nav class="nav" id="nav">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about/index.html">About</a></li>
+      <li><a href="../index.html#works">Works</a></li>
+    </ul>
+  </nav> 
+</div>
+
+<div class="menu-bg" id="menu-bg"></div>
+
 <main class="work_page">
     <section class="f4">
         <div class="inner">

@@ -1,5 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
+html{
+  scroll-behavior: smooth;
+}
 img{
   max-width: 100%;
   height: auto;
@@ -601,6 +604,23 @@ body{
   border: 8px solid #222221;
   padding: 3% 3% 5%;
 }
+  /* ハンバーガー */
+.nav ul {
+  padding: 0 0 0 17px;
+  /* border: 1px solid #000; */
+}
+.nav li {
+  padding: 5px 0;
+}
+.change {
+  top: 70px;
+}
+.change-bg {
+  width: 400px;
+  height: 350px;
+  transform: translate(-70%,-30%);
+}
+
 .top .skill .container{
   margin: 3% auto 3% auto;
   width: 100%;
